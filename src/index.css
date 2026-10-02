@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Syne', system-ui, -apple-system, sans-serif;
+  --color-accent: #ef4444;
+  --color-accent-hover: #dc2626;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html.theme-white {
+  color-scheme: light;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 15, 0.8);
+}
+
+html.theme-white ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(239, 68, 68, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(239, 68, 68, 0.55);
+}
+
+/* Dark + White High Contrast Styling */
+.dark-white-surface {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%), #121217;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dark-white-card {
+  background: #111116;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark-white-card:hover {
+  border-color: rgba(239, 68, 68, 0.55);
+  box-shadow: 0 16px 36px -12px rgba(239, 68, 68, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+/* White Theme Dynamic Overrides */
+html.theme-white body {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+html.theme-white .dark-white-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.06);
+}
+
+html.theme-white .dark-white-card:hover {
+  border-color: rgba(239, 68, 68, 0.6) !important;
+  box-shadow: 0 16px 36px -10px rgba(239, 68, 68, 0.15);
+  transform: translateY(-3px);
+}
+
+html.theme-white h1, 
+html.theme-white h2, 
+html.theme-white h3, 
+html.theme-white h4 {
+  color: #0F172A !important;
+}
+
+html.theme-white p {
+  color: #475569;
+}
+
+html.theme-white footer {
+  background-color: #FFFFFF !important;
+  border-top-color: #E2E8F0 !important;
+}
+
+html.theme-white .bg-neutral-900\/90,
+html.theme-white .bg-neutral-900,
+html.theme-white .bg-neutral-900\/80 {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.theme-white .bg-neutral-950 {
+  background-color: #F1F5F9 !important;
+  border-color: #E2E8F0 !important;
+}
+
+html.theme-white .text-neutral-300,
+html.theme-white .text-neutral-400 {
+  color: #475569 !important;
+}
+
+html.theme-white .border-neutral-800,
+html.theme-white .border-neutral-800\/80,
+html.theme-white .border-neutral-800\/60 {
+  border-color: #E2E8F0 !important;
+}
+
+/* Red Glow and Gradients */
+.radial-red-glow {
+  background: radial-gradient(circle at 50% 20%, rgba(239, 68, 68, 0.16) 0%, rgba(220, 38, 38, 0.05) 45%, transparent 70%);
+}
+
+.subtle-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+html.theme-white .subtle-grid {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.08) 1px, transparent 1px);
+}
+
+/* Professional card hover */
+.agency-card {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.agency-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 16px 36px -12px rgba(239, 68, 68, 0.15);
+}
